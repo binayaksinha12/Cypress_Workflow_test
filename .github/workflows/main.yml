@@ -11,13 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      # 1. Check out the repository code
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # 2. Run the Cypress tests using the official GitHub Action
       - name: Cypress run
         uses: cypress-io/github-action@v6
-        with:
-          # If testing a real app, uncomment below to start the server first
-          # build: npm run build
-          # start: npm start
-          # wait-on: 'http://localhost:3000'
